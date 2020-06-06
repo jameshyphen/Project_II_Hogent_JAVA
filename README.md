@@ -28,3 +28,5 @@ Project duration:
 6 weeks:
 
 - 3 sprints of 2 weeks
+
+(C) HoGent Projecten II
