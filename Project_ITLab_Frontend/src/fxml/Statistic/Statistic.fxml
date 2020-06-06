@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="backPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Statistic.StatisticController">
+   <center>
+      <Pane prefHeight="800.0" prefWidth="525.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="263.0" layoutY="22.0" prefHeight="35.0" prefWidth="35.0" text="Type:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbType" layoutX="327.0" layoutY="27.0" prefHeight="21.0" prefWidth="169.0" promptText="Kies..." />
+            <TableView fx:id="sessionsTable" layoutX="25.0" layoutY="120.0" onMouseClicked="#deselectAll" prefHeight="655.0" prefWidth="470.0" />
+            <TableView fx:id="usersTable" layoutX="25.0" layoutY="120.0" onMouseClicked="#deselectAll" prefHeight="655.0" prefWidth="470.0" visible="false" />
+            <Label layoutX="25.0" layoutY="13.0" text="Statistieken">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txfSearchSession" layoutX="25.0" layoutY="95.0" prefHeight="25.0" prefWidth="470.0" promptText="Zoek sessies..." visible="false" />
+            <TextField fx:id="txfSearchUser" layoutX="25.0" layoutY="95.0" prefHeight="25.0" prefWidth="470.0" promptText="Zoek gebruikers..." visible="false" />
+         </children>
+      </Pane>
+   </center>
+   <right>
+      <Pane fx:id="rightPane" prefHeight="800.0" prefWidth="525.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

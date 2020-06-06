@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+    <!-- Define a name used to get an entity manager. Define that you will
+    complete transactions with the DB  -->
+    <persistence-unit name="Project_ITLab" transaction-type="RESOURCE_LOCAL">
+
+        <!-- Define the class for Hibernate which implements JPA -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Define the object that should be persisted in the database -->
+        <class>domain.models.Session</class>
+        <class>domain.models.Announcement</class>
+        <class>domain.models.User</class>
+        <class>domain.models.Feedback</class>
+        <class>domain.models.RegisteredUser</class>
+        <class>domain.models.AuthUser</class>
+        <class>domain.models.SessionCalendar</class>
+        <class>domain.models.SessionLeader</class>
+
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <!-- Driver for DB database -->
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+            <!-- URL for DB -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://40.118.16.70;DatabaseName=Project_ITLab" />
+            <!-- Username -->
+            <property name="javax.persistence.jdbc.user" value="dzhem.aptula" />
+            <!-- Password -->
+            <property name="javax.persistence.jdbc.password" value="4.C4F064f0cE" />
+
+            <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform"/>
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.use_sql_comments" value="true" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
+        </properties>
+    </persistence-unit>
+</persistence>

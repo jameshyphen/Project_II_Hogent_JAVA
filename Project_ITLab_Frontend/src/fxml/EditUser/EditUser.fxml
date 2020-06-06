@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.EditUser.EditUserController">
+    <center>
+        <Pane fx:id="backPane" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="15.0" layoutY="11.0" prefHeight="21.0" prefWidth="169.0" text="Gebruikers">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="userTableview" layoutX="8.0" layoutY="71.0" onMouseClicked="#deselectAll" prefHeight="705.0" prefWidth="701.0" />
+                <TextField fx:id="textFieldSearch" layoutX="150.0" layoutY="16.0" promptText="Zoek gebruiker..." />
+            </children>
+        </Pane>
+    </center>
+</BorderPane>

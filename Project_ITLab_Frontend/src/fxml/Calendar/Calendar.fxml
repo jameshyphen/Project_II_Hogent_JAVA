@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import tornadofx.control.DateTimePicker?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.Calendar.CalendarController">
+   <center>
+      <Pane fx:id="backPane" prefHeight="487.0" prefWidth="852.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" layoutX="25.0" layoutY="119.0" prefHeight="478.0" prefWidth="300.0" />
+            <Button fx:id="btnCreate" layoutX="25.0" layoutY="59.0" mnemonicParsing="false" onAction="#create" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: rgb(112,128,144); -fx-background-radius: 0px;" text="Create" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDelete" layoutX="130.0" layoutY="59.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: rgb(220,20,60); -fx-background-radius: 0px;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSave" layoutX="235.0" layoutY="59.0" mnemonicParsing="false" onAction="#save" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: rgb(34,139,34); -fx-background-radius: 0px;" text="Save" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancel" layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#cancel" style="-fx-background-radius: 50%;" text="X" />
+            <Label fx:id="lblWrongcreds" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="27.0" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: rgba(255,0,0,0.4); -fx-background-radius: 10px;" text="Er is iets mis gegaan bij validatie, controleer uw velden." textAlignment="CENTER" textFill="WHITE" visible="false" />
+            <Label layoutX="25.0" layoutY="632.0" text="Start datum" />
+            <Label layoutX="25.0" layoutY="707.0" text="Eind datum" />
+            <DateTimePicker fx:id="dpStart" layoutX="25.0" layoutY="657.0" />
+            <DateTimePicker fx:id="dpEnd" layoutX="25.0" layoutY="732.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

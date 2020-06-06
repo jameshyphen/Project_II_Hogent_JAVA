@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="hibernate.connection.url">jdbc:sqlserver://40.118.16.70;DatabaseName=Project_ITLab</property>
+        <property name="hibernate.connection.username">dzhem.aptula</property>
+        <property name="hibernate.connection.password">4.C4F064f0cE</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <mapping class="domain.models.Session"/>
+        <mapping class="domain.models.User"/>
+        <mapping class="domain.models.Announcement"/>
+        <mapping class="domain.models.Feedback"/>
+        <mapping class="domain.models.RegisteredUser"/>
+        <mapping class="domain.models.AuthUser"/>
+        <mapping class="domain.models.SessionLeader"/>
+        <mapping class="domain.models.SessionCalendar"/>
+<!--        DOESNT WORK ^^-->
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import tornadofx.control.DateTimePicker?>
+<Pane fx:id="backPane" prefHeight="800.0" prefWidth="650.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.SessionDataInput.SessionDataInputController">
+    <children>
+        <TextField fx:id="txfTitle" layoutX="25.0" layoutY="26.0" prefHeight="40.0" prefWidth="275.0" promptText="Titel*">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </TextField>
+        <Text layoutX="25.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max plaatsen*:" wrappingWidth="110.39999999999986" />
+        <TextField fx:id="txfMax" layoutX="150.0" layoutY="85.0" prefHeight="25.0" prefWidth="150.0" promptText="0" />
+        <DateTimePicker fx:id="dtpStart" layoutX="25.0" layoutY="125.0" prefHeight="25.0" prefWidth="125.0" promptText="Start*" />
+        <DateTimePicker fx:id="dtpEnd" layoutX="175.0" layoutY="125.0" prefHeight="25.0" prefWidth="125.0" promptText="Einde*" />
+        <TextField fx:id="txfRoom" layoutX="25.0" layoutY="165.0" prefHeight="25.0" prefWidth="100.0" promptText="Lokaal*" />
+        <TextField fx:id="txfSpeaker" layoutX="150.0" layoutY="165.0" prefHeight="25.0" prefWidth="150.0" promptText="Gast spreker" />
+        <Text layoutX="25.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Beschrijving*:" />
+        <TextArea fx:id="txfDescription" layoutX="25.0" layoutY="240.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="355.0" prefWidth="275.0" wrapText="true" />
+        <CheckBox fx:id="chkReminder" layoutX="25.0" layoutY="615.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="90.0" text="Herinnering" />
+        <DateTimePicker fx:id="dtpReminder" layoutX="125.0" layoutY="610.0" prefHeight="25.0" prefWidth="150.0" promptText="Herinneringsdatum" />
+        <Button fx:id="btnAddFile" layoutX="25.0" layoutY="645.0" mnemonicParsing="false" onAction="#multiFileChooser" prefHeight="25.0" prefWidth="110.0" text="Media toevoegen" />
+        <Button fx:id="btnSendReminder" layoutX="200.0" layoutY="647.0" mnemonicParsing="false" onAction="#sendReminder" prefHeight="25.0" prefWidth="110.0" text="Send Reminder" visible="false" />
+        <Button fx:id="btnFeedback" layoutX="25.0" layoutY="675.0" mnemonicParsing="false" onAction="#slideScreen" prefHeight="25.0" prefWidth="110.0" text="Feedback" />
+        <Button fx:id="btnCancelFeedback" layoutX="200.0" layoutY="677.0" mnemonicParsing="false" onAction="#cancelFeedback" prefHeight="25.0" prefWidth="110.0" text="CancelFeedback" visible="false" />
+        <Button id="loginButton" fx:id="btnSave" defaultButton="true" focusTraversable="false" layoutX="25.0" layoutY="705.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#saveSession" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: rgba(34,139,34); -fx-skin: 'fxml.Skins.ConfirmButtonSkin'; -fx-background-radius: 10px;" styleClass="loginButton" text="Save" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <Button id="loginButton" fx:id="btnDelete" defaultButton="true" focusTraversable="false" layoutX="200.0" layoutY="705.0" maxHeight="40.0" maxWidth="120.0" mnemonicParsing="false" onAction="#deleteSession" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: rgba(220,20,60); -fx-skin: 'fxml.Skins.ConfirmButtonSkin'; -fx-background-radius: 10px;" styleClass="loginButton" text="Delete" textFill="WHITE">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnCancel" layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#cancel" style="-fx-background-radius: 50%;" text="X" />
+        <Label fx:id="lblError" alignment="CENTER" layoutX="25.0" layoutY="754.0" prefHeight="32.0" prefWidth="275.0" style="-fx-background-color: rgba(255,0,0,0.4); -fx-background-radius: 10px; -fx-padding: 3px;" text="Een of meer nodige velden waren niet ingevuld." visible="false" />
+    </children>
+</Pane>
