@@ -15,8 +15,6 @@ Project members:
 - Nick Lersberghe: https://github.com/nlersber
 - Tijl Zwartjes: https://github.com/TijlZ
 
-(Janne Van Schepdael)
-
 ---
 
 This was done via AGILE Scrum, using Trello and other technologies.
